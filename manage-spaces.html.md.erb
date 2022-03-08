@@ -17,13 +17,12 @@ domains, and spaces, managing member permissions, adding metadata, and more.
 For information about managing apps and service instances, see
 [Managing Apps and Service Instances Using Apps Manager](manage-apps.html).
 
-<% unless vars.disallow_multi_foundation %>
+
 <!-- This ensures that the paragraph below only appears in the PCF docs, not in the PWS docs.  -->
 
 You can manage orgs and spaces across multiple foundations. For more information, see
 [Configuring Multi-Foundation Support in Apps Manager](../opsguide/configure-multi-foundation.html).
 
-<% end %>
 
 
 ## <a id='prerequisite'></a> Prerequisite
@@ -83,14 +82,13 @@ In the org **Domains** page, you can do the following:
 
 * See the **Type** associated with each domain. A type is either **Globally Shared** or
 **Privately Shared**. For more information about globally and locally shared domains, see
-[Shared Domains](https://docs.pivotal.io/application-service/<%= product_info['local_product_version'].to_s.sub('.','-') %>/devguide/deploy-apps/routes-domains.html#shared-domains)
-and [Private Domains](https://docs.pivotal.io/application-service/<%= product_info['local_product_version'].to_s.sub('.','-') %>/devguide/deploy-apps/routes-domains.html#private-domains)
+
 in _Configuring Routes and Domains_.
 
 * Delete a domain by clicking the vertical three-dot icon and selecting **Delete**. You must have permission to manage the domain to delete it.
 
 * Create a new private domain by clicking **Add a Domain**. You must have Org Manager permissions to create a private domain.
-  <p class="note"><strong>Note:</strong> To create globally shared domains, you must have Admin permissions and use the Cloud Foundry Command Line Interface (cf CLI). For more information, see [Create a Shared Domain](https://docs.pivotal.io/application-service/<%= product_info['local_product_version'].to_s.sub('.','-') %>//devguide/deploy-apps/routes-domains.html#create-a-shared-domain).</p>
+  <p class="note"><strong>Note:</strong> To create globally shared domains, you must have Admin permissions and use the Cloud Foundry Command Line Interface (cf CLI). For more information, see .</p>
 
 ### <a id="members"></a> Manage Members
 
@@ -117,7 +115,7 @@ _<%= vars.app_runtime_abbr %> Security_.
 
 You can add metadata, including labels and annotations, to orgs using Apps Manager. 
 
-<% if vars.platform_code.include? "CF" %>
+<% if vars.platform_code == "CF" %>
 
 For more information about adding metadata to objects in
 <%= vars.app_runtime_first %>,
@@ -126,8 +124,7 @@ see [Using Metadata](../adminguide/metadata.html).
 <% else %>
 
 For more information about adding metadata to objects in
-<%= vars.app_runtime_first %>, see
-[Using Metadata](https://docs.pivotal.io/application-service/<%= product_info['local_product_version'].to_s.sub('.','-') %>/adminguide/metadata.html).
+<%= vars.app_runtime_first %>, see.
 
 <% end %>
 
@@ -225,7 +222,7 @@ _<%= vars.app_runtime_abbr %> Security_.
 
 You can add metadata, including labels and annotations spaces using Apps Manager.
 
-<% if vars.platform_code.include? "CF" %>
+<% if vars.platform_code == "CF" %>
 
 For more information about adding metadata to objects in <%= vars.app_runtime_abbr %>,
 see [Using Metadata](../adminguide/metadata.html).
